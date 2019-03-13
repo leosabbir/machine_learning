@@ -1,6 +1,7 @@
 # xor.py
 import random
 
+# seed is set for Python 3.6.5 (for other versions other seed might be required)
 random.seed(33)
 
 w11 = random.uniform(-0.2, 0.2)
