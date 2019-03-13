@@ -1,15 +1,15 @@
 # xor.py
 import random
 
-w11 = random.uniform(-0.02, 0.02)
-w12 = random.uniform(-0.02, 0.02)
-w21 = random.uniform(-0.02, 0.02)
-w22 = random.uniform(-0.02, 0.02)
-b1 = random.uniform(-0.02, 0.02)
-b2 = random.uniform(-0.02, 0.02)
-u = random.uniform(-0.02, 0.02)
-v = random.uniform(-0.02, 0.02)
-b3 = random.uniform(-0.02, 0.02)
+w11 = random.uniform(-0.2, 0.2)
+w12 = random.uniform(-0.2, 0.2)
+w21 = random.uniform(-0.2, 0.2)
+w22 = random.uniform(-0.2, 0.2)
+b1 = random.uniform(-0.2, 0.2)
+b2 = random.uniform(-0.2, 0.2)
+u = random.uniform(-0.2, 0.2)
+v = random.uniform(-0.2, 0.2)
+b3 = random.uniform(-0.2, 0.2)
 
 trainingData = []
 
@@ -23,13 +23,13 @@ def generateTrainingData():
 
 def activation(x):
     if x < 0:
-        return 0.001 * x
+        return 0.1 * x
     return x
 
 
 def deriv_activation(x):
     if x < 0:
-        return 0.001
+        return 0.1
     return 1
 
 
@@ -42,7 +42,7 @@ def truth(x1, x2):
 def train():
     global w11, w12, w21, w22, b1, b2, u, v, b3
     EPOCH = 10
-    n = 0.002
+    n = 0.1
 
     for i in range(EPOCH):
         for j in range(len(trainingData)):
