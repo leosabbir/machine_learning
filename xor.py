@@ -1,6 +1,8 @@
 # xor.py
 import random
 
+random.seed(33)
+
 w11 = random.uniform(-0.2, 0.2)
 w12 = random.uniform(-0.2, 0.2)
 w21 = random.uniform(-0.2, 0.2)
